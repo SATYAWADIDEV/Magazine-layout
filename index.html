@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Magazine Layout</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+		}
+		.header {
+			height: 120px;
+			background: black;
+			color: white;
+			text-align: center;
+			margin: 0;
+			padding: 10px;
+		}
+		.subheader {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			column-gap: 50px;
+		}
+		.container {
+			display: grid;
+			grid-template-areas: 
+				"cover cover cover"
+				"article1 article2 article3"
+				"ad1 article4 ad2";
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: auto auto auto;
+			gap: 10px; /* Space between grid items */
+			padding: 10px;
+		}
+		.container div {
+			padding: 10px;
+		}
+		#items1 {
+			background-image: linear-gradient(to bottom, #66FF00 20%, #0BDA51 80%);
+			grid-area: cover;
+			color: white;
+			height: 100px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		#items2 {
+			grid-area: article1;
+			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+			background-color: #f0f0f0;
+			height: 100px;
+		}
+		#items3 {
+			grid-area: article2;
+			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+			background-color: #f0f0f0;
+			height: 100px;
+		}
+		#items4 {
+			grid-area: article3;
+			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+			background-color: #f0f0f0;
+			height: 100px;
+		}
+		#items5 {
+			grid-area: article4;
+			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+			background-color: #f0f0f0;
+			height: 100px;
+		}
+		#items6 {
+			grid-area: ad1;
+			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+			background-image: linear-gradient(to top, #FFA500, #FF4500);
+			height: 100px;
+			display: flex;			
+			justify-content: center;
+			color: white;			
+		}
+		#items7 {
+			grid-area: ad2;
+			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+			background-image: linear-gradient(to top, #FFA500, #FF4500);
+			height: 100px;
+			display: flex;
+			justify-content: center;
+			color: white;
+		}
+		.footer{
+			height: 40px;
+			width: 100vw;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: black;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="title">
+			<h1>Magazine Title</h1>
+		</div>
+		<div class="subheader">
+			<p>Articles</p>
+			<p>Advertisements</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div id="items1"><b>Cover Image</b></div>
+		<div id="items2">
+			<h4>Article 1</h4>
+			<p>This is a brief summary of the article.</p>
+		</div>
+		<div id="items3">
+			<h4>Article 2</h4>
+			<p>This is a brief summary of the article.</p>
+		</div>
+		<div id="items4">
+			<h4>Article 3</h4>
+			<p>This is a brief summary of the article.</p>
+		</div>
+		<div id="items5">
+			<h4>Article 4</h4>
+			<p>This is a brief summary of the article.</p>
+		</div>
+		<div id="items6">
+			<p>Advertisement 1</p>
+		</div>
+		<div id="items7">
+			<p>Advertisement 2</p>
+		</div>
+	</div>
+	<div class="footer">
+		<p>2024 Magzine Company</p>
+	</div>
+</body>
+</html>
